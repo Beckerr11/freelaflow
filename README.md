@@ -1,28 +1,35 @@
 # FreelaFlow
 
-CRM e operacao comercial para freelancers e micro-agencias.
+Produto real da DouglasDev para operacao de leads com painel interativo full stack.
 
-## Problema
-Freelancers perdem receita por falta de processo comercial e operacional.
+## O que este repositorio entrega
+- API Node/Express com validacao de entrada via Zod.
+- Persistencia local de dados em arquivo (modo desenvolvimento/producao).
+- Filtros reais por status, prioridade e busca textual.
+- Exportacao CSV para analise operacional.
+- Frontend React responsivo com feedback de carregamento/erro e interacoes completas.
 
-## Publico
-Freelancers, studios pequenos e agencias boutique.
+## Fluxo operacional
+1. Cadastrar lead com contexto de negocio.
+2. Atualizar etapa e prioridade do atendimento.
+3. Concluir negociacao e registrar resultado final.
 
-## MVP
-- Pipeline de leads com etapas customizaveis.
-- Propostas e follow-up com status por cliente.
-- Checklist de onboarding e entregas.
-- Painel financeiro simples com previsao de caixa.
-
-## Stack
-- React + TypeScript + Vite
-- Node + Express + TypeScript
-- CI com lint/test/build/audit
+## Endpoints principais
+- `GET /health`
+- `GET /api/meta`
+- `GET /api/work-items`
+- `GET /api/work-items/export.csv`
+- `POST /api/work-items`
+- `PATCH /api/work-items/:id/toggle`
+- `DELETE /api/work-items/:id`
 
 ## Setup
-1. npm install --include=dev
-2. npm run bootstrap
-3. npm run dev
+1. `npm install --include=dev`
+2. `npm run bootstrap`
+3. `npm run dev`
 
-## Monetizacao
-Plano mensal com trial de 14 dias.
+## Qualidade
+- `npm run quality` executa lint + testes + build no backend e frontend.
+
+## Marca
+DouglasDev
